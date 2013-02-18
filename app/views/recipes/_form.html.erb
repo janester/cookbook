@@ -9,6 +9,8 @@
   <%= f.number_field :servingsize %><br>
   <%= f.label :instructions %>
   <%= f.text_field :instructions %><br>
+  <%= f.label :image %>
+  <%= f.text_field :image %><br>
   <div>
     <% Ingredient.order(:name).each do |ingredient| %>
       <span><%= ingredient.name %></span>

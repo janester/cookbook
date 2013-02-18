@@ -7,22 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="head">
-    <h1>The Kitchen</h1>
-    <nav>
-      <ul>
-        <li><%= link_to("Books", books_path)%></li>
-        <li><%= link_to("Recipes", recipes_path)%></li>
-        <li><%= link_to("Ingredients", ingredients_path)%></li>
-        <li><%= link_to("New Book", new_book_path)%></li>
-        <li><%= link_to("New Recipe", new_recipe_path)%></li>
-        <li><%= link_to("New Ingredient", new_ingredient_path)%></li>
+  <div class="container">
+    <div id="head">
+      <div class="row">
+        <div class="span12"><h1>The Kitchen</h1></div>
+      </div>
+      <nav>
+        <ul>
+          <li><%= link_to("Books", books_path)%></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to("Recipes", recipes_path)%></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to("Ingredients", ingredients_path)%></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to("New Book", new_book_path)%></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to("New Recipe", new_recipe_path)%></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to("New Ingredient", new_ingredient_path)%></li>
+        </ul>
+      </nav>
+    </div>
 
-      </ul>
-    </nav>
+    <%= yield %>
+
   </div>
 
-<%= yield %>
+
 
 </body>
 </html>

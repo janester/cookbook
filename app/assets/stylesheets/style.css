@@ -1,72 +1,58 @@
-@import url(http://fonts.googleapis.com/css?family=Cedarville+Cursive);
-
-
-body {
-  background: #142341;
-  color: white;
-}
-#head {
-  width: 1000px;
-  margin: auto;
-  text-align: center;
-  margin-bottom: 20px;
-}
-img {
-  border: 2px solid #F9C536;
-  width: 300px;
-  heigh: 300px;
-}
-
-h1 {
-  font-size: 80px;
-  font-family: 'Comic Zine OT';
-  color: white;
-}
 nav li {
   display: inline-block;
-  font-size: 20px;
-  font-family: 'Cedarville Cursive', cursive;
 }
-.book_cont {
-  border: 2px dashed black;
-  width: 800px;
-  margin: auto;
-  background: #F9C536;
-}
-.img_div {
+nav {
+  border: 1px dashed black;
   text-align: center;
 }
-h2, h3 {
-  font-size: 30px;
-  padding: 10px;
-  font-family: 'Cedarville Cursive', cursive;
-  color: #D90707;
+img {
+  width: 300px;
 }
-.recipes_img{
+#head {
+  border: 1px dashed black;
+  margin-bottom: 20px;
+}
+.book_img {
   text-align: center;
 }
-.recipes_container img {
-  width: 340px;
-  height: 250px;
+.book_img img, .img_div {
+  width: 200px;
+  height: 270px;
 }
-.ingredients_cont img {
-  width: 250px;
-  height: 200px;
+#book_container, #recipe_container, #ing_container {
+  display: inline-block;
+  border: 1px dashed black;
+  padding-left: 5px;
+  margin-left: 75px;
+  margin-bottom: 20px;
+
 }
-.ingredients_cont {
-  text-align: center;
-}
-.ing_sub_cont {
+#ing_book_show {
   display: inline-block;
 }
-a, a:visited {
-  color: #D90707;
-  text-decoration: none;
+#ing_book_show img {
+  width: 100px;
+  height: 100px;
 }
-a:hover {
-  color: white;
+#row_book_show {
+  margin-bottom: 10px;
 }
-.recipe_container:nth-child(odd)
-{
-  background: #5E3723;
+#row_book_show:nth-child(odd) {
+  background: grey;
 }
+#ing_book_big {
+  padding-top: 20px;
+}
+.recipe_img img, .ing_img img, #show_ing_img img, #rec_ing_show img {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 20px;
+}
+.recipe_img, .ing_img {
+  text-align: center;
+}
+#ing_recipe_show, #rec_ing_show {
+  margin-left: 0px;
+  margin-right: 20px;
+}
+

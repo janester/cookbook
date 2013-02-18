@@ -1,11 +1,15 @@
-<ol>
-  <% @ingredients.each do |ingredient| %>
-    <li><%= link_to(ingredient.name, ingredient) %>
-      <ul>
-        <li><%= image_tag(ingredient.image) %></li>
-        <li><%= ingredient.measurement %></li>
-        <li><%= ingredient.cost %></li>
-      </ul>
-    </li>
-  <% end %>
-</ol>
+  <div class="row">
+<% @ingredients.each do |ingredient| %>
+    <div class="span3" id="ing_container">
+      <div><%= link_to(ingredient.name, ingredient) %></div>
+      <div class="ing_img"><%= image_tag(ingredient.image) %></div>
+      <div>Measurement: <%= ingredient.measurement %></div>
+      <div>Cost: <%= ingredient.cost %></div>
+    </div>
+<% end %>
+  </div>
+
+
+
+
+

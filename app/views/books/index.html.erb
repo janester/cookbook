@@ -1,11 +1,14 @@
-<ol>
-  <% @books.each do |book| %>
-    <li><%= link_to(book.title, book) %>
-      <ul>
-        <li><%= image_tag(book.cover) %></li>
-        <li>Cuisine: <%= book.cuisine %></li>
-        <li>Chef: <%= book.chef %></li>
-      </ul>
-    </li>
-  <% end %>
-</ol>
+  <div class="row">
+<% @books.each do |book| %>
+    <div class="span3" id="book_container">
+      <div><%= link_to(book.title, book) %></div>
+      <div class="book_img"><%= image_tag(book.cover) %></div>
+      <div>Cuisine: <%= book.cuisine %></div>
+      <div>Chef: <%= book.chef %></div>
+    </div>
+<% end %>
+  </div>
+
+
+
+

@@ -1,13 +1,24 @@
-<div>
-  <div><%= link_to(@recipe.name, @recipe) %></div>
-  <div><%= image_tag(@recipe.image) %></div>
-  <div>Course: <%= @recipe.course %></div>
-  <div>Cook Time: <%= minutes_to_human(@recipe.cooktime) %></div>
-  <div>Serving Size: <%= @recipe.servingsize %></div>
-  <div>Instrcutions: <%= @recipe.instructions %></div>
+<div class="row">
+  <div class="span4 offset2" id="show_recipe_cont">
+    <div><h2><%= link_to(@recipe.name, @recipe) %></h2></div>
+    <div>Course: <%= @recipe.course %></div>
+     <div>Cook Time: <%= minutes_to_human(@recipe.cooktime) %></div>
+    <div>Serving Size: <%= @recipe.servingsize %></div>
+    <div>Instrcutions: <%= @recipe.instructions %></div>
+    <div><%= link_to("Delete", @recipe, :method => :delete, :confirm => "Are you sure you want to delete this?") %></div>
+    <div><%= link_to("Edit", edit_recipe_path, :method=>:get) %></div>
+  </div>
+  <div class="span6">
+    <div class="img_div"><%= image_tag(@recipe.image) %></div>
+  </div>
 </div>
 
-
-<%= link_to("Delete", @recipe, :method => :delete, :confirm => "Are you sure you want to delete this?") %>
-
-<%= link_to("Edit", edit_recipe_path, :method=>:get) %>
+<div class="row" class="show_row">
+  <h3>Ingredients: </h3>
+  <% @recipe.ingredients.each do |ingredient| %>
+    <div class="span3" id="ing_recipe_show">
+      <div><%= ingredient.name %></div>
+      <div id="show_ing_img"><%= image_tag(ingredient.image)%></div>
+    </div>
+  <% end %>
+</div>
